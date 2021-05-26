@@ -5,7 +5,7 @@
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100%;
   width: 100vw;
   background-color: #fff;
   display: flex;
@@ -18,9 +18,8 @@ body {
 
 .container {
   background-color: peachpuff;
-  /* width: 100vmin;
-  height: 100vmin; */
-
+  width: 100vmin;
+  height: 100%;
   border-radius: 5%;
   margin: 5vmin;
 }
@@ -40,7 +39,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-around;
   align-items: center;
-  font-size: 25px;
+  font-size: 3vmin;
 }
 
 .status span{
@@ -60,13 +59,15 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr) ;
   grid-template-rows: repeat(3, 1fr);
-  margin: 5vmin;
-  grid-gap: 15px;
+  height: 60vmin;
+  width:  75vmin;
+  margin: 5vmin auto;
+  grid-gap: 1vmin;
 }
 
 .game-cell {
-  height: 200px;
-  width:  200px;
+  height: 20vmin;
+  width:  25vmin;
   background-color: peachpuff;
   cursor: pointer;
   display: flex;
@@ -80,17 +81,18 @@ body {
 
 .x::after {
   content: "×";
-  font-size: 200px;
+  font-size: 20vmin;
   cursor: auto;
 }
 
 .o::after {
   content: "○";
-  font-size: 230px;
+  font-size: 25vmin;
   cursor: auto;
   color: #fff;
 }
 
 .won {
   color: red;
+  cursor: auto;
 }
