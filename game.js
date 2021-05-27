@@ -27,6 +27,7 @@ const checkGameStatus = () => {
   const bottomRight = cellDivs[8].classList[1]
 
   // check for winner - 8 cases
+  // TO-DO: see if there's a dynamic way to do this
   if (topLeft && topLeft === topMiddle && topLeft === topRight) {
     processWinner(topLeft);
     cellDivs[0].classList.add("won");
@@ -97,7 +98,7 @@ const letterToSymbol = (letter) => {
 const handleReset = (e) => {
   xIsNext = true;
   gameIsLive = true;
-  statusDiv.innerHTML = `${X_SYMBOL} is next`
+  statusDiv.innerHTML = `${X_SYMBOL} goes first!`
   for (let cellDiv of cellDivs) {
     cellDiv.classList.remove("x")
     cellDiv.classList.remove("o")
